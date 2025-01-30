@@ -56,7 +56,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Debug secrets
-        run:
-            echo "GHCR_PAT is set: ${{ secrets.GHCR_PAT != '' }}"
+        run: echo "GHCR_PAT is set: ${{ secrets.GHCR_PAT != '' }}"
       - name: Publish container image
         run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
