@@ -5,6 +5,8 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: geraldvaras/catalog-service
   VERSION: latest
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
 
 jobs:
   build:
